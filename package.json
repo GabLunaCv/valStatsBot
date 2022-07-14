@@ -1,0 +1,33 @@
+{
+  "name": "valstatsbot",
+  "version": "0.0.1",
+  "description": "A discord bot that show yours Valorant status",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabLunaCv/valStatsBot.git"
+  },
+  "keywords": [
+    "Valorant",
+    "Bot"
+  ],
+  "author": "GabLunaDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GabLunaCv/valStatsBot/issues"
+  },
+  "homepage": "https://github.com/GabLunaCv/valStatsBot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "axios": "^0.27.2",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
