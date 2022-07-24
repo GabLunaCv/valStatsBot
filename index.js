@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const { Client } = require("discord.js");
+const { Client, Collection } = require("discord.js");
 const { ApplyCommands } = require("./deploy-commands");
 require("dotenv").config();
 
 const token = process.env.DISCORD_TOKEN;
 
-const client = new Client({ intents: ["GUILDS"] });
+const client = new Client({ intents: ["GUILDS","GUILD_MESSAGES"] });
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, "commands");
@@ -20,8 +20,6 @@ for (const file of commandFiles) {
 
   client.commands.set(command.data.name, command);
 }
-
-ApplyCommands();
 
 client.once("ready", () => {
   console.log("Ready!");
